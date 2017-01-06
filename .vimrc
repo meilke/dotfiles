@@ -3,6 +3,7 @@ set number
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+colorscheme molokai
 
 "set statusline+=%#warningmsg
 "set statusline+=%{SyntasticStatuslineFlag()}
@@ -12,3 +13,5 @@ let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+"let g:molokai_original = 1
+"let g:rehash256 = 1
