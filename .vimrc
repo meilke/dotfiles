@@ -103,3 +103,7 @@ au BufRead,BufNewFile *.json,*.js,*.jsx set tabstop=8
 au BufRead,BufNewFile *.json,*.js,*.jsx set shiftwidth=2
 au BufRead,BufNewFile *.json,*.js,*.jsx set expandtab
 "
+au BufRead,BufNewFile *.yml set tabstop=8
+au BufRead,BufNewFile *.yml set shiftwidth=2
+au BufRead,BufNewFile *.yml set expandtab
+"
