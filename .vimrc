@@ -1,6 +1,7 @@
 set nocompatible
 set number
 execute pathogen#infect()
+execute pathogen#helptags()
 syntax on
 filetype plugin indent on
 colorscheme molokai
@@ -9,13 +10,14 @@ colorscheme molokai
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
 "let g:molokai_original = 1
 "let g:rehash256 = 1
 
+let g:pymode_folding = 0
+
+let maplocalleader = "\\"
+autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
+"
 " vimrc file for following the coding standards specified in PEP 7 & 8.
 "
 " To use this file, source it in your own personal .vimrc file (``source
