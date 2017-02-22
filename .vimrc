@@ -14,6 +14,7 @@ colorscheme molokai
 "let g:rehash256 = 1
 
 let g:pymode_folding = 0
+set completeopt-=preview
 
 let maplocalleader = "\\"
 autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
