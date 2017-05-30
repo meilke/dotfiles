@@ -13,6 +13,8 @@ colorscheme molokai
 "let g:molokai_original = 1
 "let g:rehash256 = 1
 
+set backupcopy=yes
+
 let g:pymode_folding = 0
 set completeopt-=preview
 
