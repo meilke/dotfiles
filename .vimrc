@@ -15,6 +15,10 @@ colorscheme molokai
 
 set backupcopy=yes
 
+let g:ale_keep_list_window_open = 0
+let g:ale_set_loclist = 0
+let g:ale_open_list = 0
+
 let g:pymode_folding = 0
 set completeopt-=preview
 
