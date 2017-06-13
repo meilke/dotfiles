@@ -107,3 +107,6 @@ au BufRead,BufNewFile *.yml,*.yaml set tabstop=8
 au BufRead,BufNewFile *.yml,*.yaml set shiftwidth=2
 au BufRead,BufNewFile *.yml,*.yaml set expandtab
 "
+au BufRead,BufNewFile *.php set tabstop=8
+au BufRead,BufNewFile *.php set shiftwidth=4
+au BufRead,BufNewFile *.php set expandtab
