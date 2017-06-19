@@ -24,6 +24,7 @@ set completeopt-=preview
 
 let maplocalleader = "\\"
 autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
+nmap <LocalLeader>ne :NERDTreeToggle<cr>
 "
 " vimrc file for following the coding standards specified in PEP 7 & 8.
 "
