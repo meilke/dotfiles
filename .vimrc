@@ -13,6 +13,8 @@ colorscheme molokai
 "let g:molokai_original = 1
 "let g:rehash256 = 1
 
+autocmd QuickFixCmdPost *grep* cwindow
+
 set backupcopy=yes
 
 let g:ale_keep_list_window_open = 0
