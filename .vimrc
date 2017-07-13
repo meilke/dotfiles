@@ -17,6 +17,7 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 set backupcopy=yes
 
+let g:ale_javascript_eslint_executable = "/home/cmeilke/.nvm/versions/node/v7.8.0/bin/eslint"
 let g:ale_keep_list_window_open = 0
 let g:ale_set_loclist = 0
 let g:ale_open_list = 0
