@@ -17,10 +17,16 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 set backupcopy=yes
 
+command GdiffInTab tabedit %|Gdiff
+
+let g:pymode_lint = 1
+let g:pymode_lint_ignore = "E221"
+let g:pymode_lint_on_fly = 1
+
 let g:ale_javascript_eslint_executable = "/home/cmeilke/.nvm/versions/node/v7.8.0/bin/eslint"
-let g:ale_keep_list_window_open = 0
-let g:ale_set_loclist = 0
-let g:ale_open_list = 0
+let g:ale_linters = {'python': []}
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 let g:pymode_folding = 0
 set completeopt-=preview
@@ -31,6 +37,7 @@ nmap <LocalLeader>ne :NERDTreeToggle<cr>
 nmap <LocalLeader>nf :NERDTreeFind<cr>
 
 nmap <Leader>l :lclose<cr>
+nmap <Leader>ll :ccl<cr>
 nnoremap <expr> <leader>c tabpagenr('$') > 1 ? ':tabclose<CR>' : ':q<CR>'
 
 "
