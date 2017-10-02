@@ -19,12 +19,12 @@ set backupcopy=yes
 
 command GdiffInTab tabedit %|Gdiff
 
-let g:pymode_lint = 1
+let g:pymode_lint = 0
 let g:pymode_lint_ignore = "E221"
 let g:pymode_lint_on_fly = 1
 
-let g:ale_javascript_eslint_executable = "/home/cmeilke/.nvm/versions/node/v7.8.0/bin/eslint"
-let g:ale_linters = {'python': []}
+let g:ale_javascript_eslint_executable = $HOME . "/.nvm/versions/node/v7.8.0/bin/eslint"
+let g:ale_python_pylint_executable = $HOME . "/.pyenv/versions/tox/bin/pylint"
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
