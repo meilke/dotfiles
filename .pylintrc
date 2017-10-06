@@ -1,0 +1,58 @@
+[MASTER]
+
+[SIMILARITIES]
+min-similarity-lines=15
+
+[MESSAGES CONTROL]
+# Brain-dead errors regarding standard language features
+#   W0142 = *args and **kwargs support
+#   W0403 = Relative imports
+
+# Pointless whining
+#   R0201 = Method could be a function
+#   W0613 = Unused argument
+#   W0232 = Class has no __init__ method
+#   R0903 = Too few public methods
+#   R0913 = Too many arguments
+#   C0103 = Invalid name
+#   R0914 = Too many local variables
+#   R0911 = Too many return statements
+
+# PyLint's module importation is unreliable
+#   E0401 = Unable to import module
+#   W0402 = Uses of a deprecated module
+
+# Already an error when wildcard imports are used
+#   W0614 = Unused import from wildcard
+
+# Sometimes disabled depending on how bad a module is
+#   C0111 = Missing docstring
+#   C0321 = More than one statement on a single line
+#   W0603 = Using the global statement
+
+
+# Disable the message(s) with the given id(s).
+disable=W0142,W0403,R0201,W0613,W0232,R0903,W0614,R0911,R0913,R0914,C0103,E0401,W0402,C0321,W0603,C0111
+
+[VARIABLES]
+dummy-variables-rgx=_|dummy|i_|signature
+
+[FORMAT]
+max-module-lines=1500
+max-line-length=79
+
+[DESIGN]
+max-returns=20
+max-branchs=50
+max-attributes=15
+max-statements=70
+max-public-methods=40
+
+[CLASSES]
+defining-attr-methods=__init__,reset
+
+[TYPECHECK]
+ignored-classes=
+
+[REPORTS]
+msg-template={line}: [{msg_id} {obj}] {msg}
