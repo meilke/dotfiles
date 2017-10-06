@@ -21,3 +21,7 @@ Make sure to add this to your `<home>/.gitconfig` file:
 Then link your global `.gitignore`:
 
     $ ln -s dotgitignore ~/.gitignore
+
+## pylint
+
+    $ ln -s .pylintrc ~/.pylintrc
