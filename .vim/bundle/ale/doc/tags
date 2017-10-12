@@ -99,6 +99,7 @@ ale-fuse-fusionlint	ale-fuse.txt	/*ale-fuse-fusionlint*
 ale-fuse-options	ale-fuse.txt	/*ale-fuse-options*
 ale-glsl-glslang	ale-glsl.txt	/*ale-glsl-glslang*
 ale-glsl-options	ale-glsl.txt	/*ale-glsl-options*
+ale-go-gofmt	ale-go.txt	/*ale-go-gofmt*
 ale-go-gometalinter	ale-go.txt	/*ale-go-gometalinter*
 ale-go-options	ale-go.txt	/*ale-go-options*
 ale-graphql-gqlint	ale-graphql.txt	/*ale-graphql-gqlint*
@@ -144,6 +145,8 @@ ale-lint	ale.txt	/*ale-lint*
 ale-lint-file	ale.txt	/*ale-lint-file*
 ale-lint-file-linters	ale.txt	/*ale-lint-file-linters*
 ale-linter-loading-behaviour	ale.txt	/*ale-linter-loading-behaviour*
+ale-llvm-llc	ale-llvm.txt	/*ale-llvm-llc*
+ale-llvm-options	ale-llvm.txt	/*ale-llvm-options*
 ale-loclist-format	ale.txt	/*ale-loclist-format*
 ale-lsp-linters	ale.txt	/*ale-lsp-linters*
 ale-lua-luacheck	ale-lua.txt	/*ale-lua-luacheck*
@@ -297,6 +300,7 @@ b:ale_fuse_fusionlint_executable	ale-fuse.txt	/*b:ale_fuse_fusionlint_executable
 b:ale_fuse_fusionlint_options	ale-fuse.txt	/*b:ale_fuse_fusionlint_options*
 b:ale_glsl_glslang_executable	ale-glsl.txt	/*b:ale_glsl_glslang_executable*
 b:ale_glsl_glslang_options	ale-glsl.txt	/*b:ale_glsl_glslang_options*
+b:ale_go_gofmt_options	ale-go.txt	/*b:ale_go_gofmt_options*
 b:ale_go_gometalinter_executable	ale-go.txt	/*b:ale_go_gometalinter_executable*
 b:ale_go_gometalinter_options	ale-go.txt	/*b:ale_go_gometalinter_options*
 b:ale_handlebars_embertemplatelint_executable	ale-handlebars.txt	/*b:ale_handlebars_embertemplatelint_executable*
@@ -346,6 +350,7 @@ b:ale_lacheck_executable	ale-tex.txt	/*b:ale_lacheck_executable*
 b:ale_linter_aliases	ale.txt	/*b:ale_linter_aliases*
 b:ale_linters	ale.txt	/*b:ale_linters*
 b:ale_list_window_size	ale.txt	/*b:ale_list_window_size*
+b:ale_llvm_llc_executable	ale-llvm.txt	/*b:ale_llvm_llc_executable*
 b:ale_lua_luacheck_executable	ale-lua.txt	/*b:ale_lua_luacheck_executable*
 b:ale_lua_luacheck_options	ale-lua.txt	/*b:ale_lua_luacheck_options*
 b:ale_maximum_file_size	ale.txt	/*b:ale_maximum_file_size*
@@ -366,6 +371,7 @@ b:ale_php_phpcs_executable	ale-php.txt	/*b:ale_php_phpcs_executable*
 b:ale_php_phpcs_standard	ale-php.txt	/*b:ale_php_phpcs_standard*
 b:ale_php_phpcs_use_global	ale-php.txt	/*b:ale_php_phpcs_use_global*
 b:ale_php_phpmd_ruleset	ale-php.txt	/*b:ale_php_phpmd_ruleset*
+b:ale_php_phpstan_configuration	ale-php.txt	/*b:ale_php_phpstan_configuration*
 b:ale_php_phpstan_executable	ale-php.txt	/*b:ale_php_phpstan_executable*
 b:ale_php_phpstan_level	ale-php.txt	/*b:ale_php_phpstan_level*
 b:ale_pug_puglint_executable	ale-pug.txt	/*b:ale_pug_puglint_executable*
@@ -517,6 +523,7 @@ g:ale_fuse_fusionlint_executable	ale-fuse.txt	/*g:ale_fuse_fusionlint_executable
 g:ale_fuse_fusionlint_options	ale-fuse.txt	/*g:ale_fuse_fusionlint_options*
 g:ale_glsl_glslang_executable	ale-glsl.txt	/*g:ale_glsl_glslang_executable*
 g:ale_glsl_glslang_options	ale-glsl.txt	/*g:ale_glsl_glslang_options*
+g:ale_go_gofmt_options	ale-go.txt	/*g:ale_go_gofmt_options*
 g:ale_go_gometalinter_executable	ale-go.txt	/*g:ale_go_gometalinter_executable*
 g:ale_go_gometalinter_options	ale-go.txt	/*g:ale_go_gometalinter_options*
 g:ale_handlebars_embertemplatelint_executable	ale-handlebars.txt	/*g:ale_handlebars_embertemplatelint_executable*
@@ -583,6 +590,7 @@ g:ale_lint_on_text_changed	ale.txt	/*g:ale_lint_on_text_changed*
 g:ale_linter_aliases	ale.txt	/*g:ale_linter_aliases*
 g:ale_linters	ale.txt	/*g:ale_linters*
 g:ale_list_window_size	ale.txt	/*g:ale_list_window_size*
+g:ale_llvm_llc_executable	ale-llvm.txt	/*g:ale_llvm_llc_executable*
 g:ale_lua_luacheck_executable	ale-lua.txt	/*g:ale_lua_luacheck_executable*
 g:ale_lua_luacheck_options	ale-lua.txt	/*g:ale_lua_luacheck_options*
 g:ale_max_buffer_history_size	ale.txt	/*g:ale_max_buffer_history_size*
@@ -607,6 +615,7 @@ g:ale_php_phpcs_executable	ale-php.txt	/*g:ale_php_phpcs_executable*
 g:ale_php_phpcs_standard	ale-php.txt	/*g:ale_php_phpcs_standard*
 g:ale_php_phpcs_use_global	ale-php.txt	/*g:ale_php_phpcs_use_global*
 g:ale_php_phpmd_ruleset	ale-php.txt	/*g:ale_php_phpmd_ruleset*
+g:ale_php_phpstan_configuration	ale-php.txt	/*g:ale_php_phpstan_configuration*
 g:ale_php_phpstan_executable	ale-php.txt	/*g:ale_php_phpstan_executable*
 g:ale_php_phpstan_level	ale-php.txt	/*g:ale_php_phpstan_level*
 g:ale_pug_puglint_executable	ale-pug.txt	/*g:ale_pug_puglint_executable*
