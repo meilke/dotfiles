@@ -32,6 +32,7 @@ let g:ale_linters = {'go': ['go vet']}
 let g:ale_fixers = {'go': ['gofmt']}
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <F8> <Plug>(ale_fix)
 
 set completeopt-=preview
 
