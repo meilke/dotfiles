@@ -24,6 +24,7 @@ let g:pymode_lint_ignore = "E221"
 let g:pymode_lint_on_fly = 1
 let g:pymode_folding = 0
 
+let g:ale_emit_conflict_warnings = 0
 let g:ale_javascript_eslint_executable = $HOME . "/.nvm/versions/node/v7.8.0/bin/eslint"
 let g:ale_python_pylint_executable = $HOME . "/.pyenv/versions/tox/bin/pylint"
 let g:ale_set_loclist = 0
