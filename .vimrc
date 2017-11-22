@@ -6,9 +6,7 @@ syntax on
 filetype plugin indent on
 colorscheme molokai
 
-"set statusline+=%#warningmsg
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
+let loaded_matchparen = 1
 
 "let g:molokai_original = 1
 "let g:rehash256 = 1
@@ -24,13 +22,14 @@ let g:pymode_lint_ignore = "E221"
 let g:pymode_lint_on_fly = 1
 let g:pymode_folding = 0
 
-let g:ale_emit_conflict_warnings = 0
+let g:ale_emit_conflict_warnings = 1
 let g:ale_javascript_eslint_executable = $HOME . "/.nvm/versions/node/v7.8.0/bin/eslint"
 let g:ale_python_pylint_executable = $HOME . "/.pyenv/versions/tox/bin/pylint"
 let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
+let g:ale_set_quickfix = 0
 let g:ale_linters = {'go': ['go vet']}
 let g:ale_fixers = {'go': ['gofmt']}
+let g:ale_fix_on_save = 1
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nmap <F8> <Plug>(ale_fix)
