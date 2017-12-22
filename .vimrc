@@ -34,6 +34,8 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nmap <F8> <Plug>(ale_fix)
 
+let NERDTreeIgnore = ['\.pyc$']
+
 set completeopt-=preview
 
 nmap <Leader>s <Plug>(easymotion-sn)
