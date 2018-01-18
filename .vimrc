@@ -48,6 +48,10 @@ nmap <Leader>l :lclose<cr>
 nmap <Leader>ll :ccl<cr>
 nnoremap <expr> <leader>c tabpagenr('$') > 1 ? ':tabclose<CR>' : ':q<CR>'
 
+nmap <Leader>pr :SidewaysRight<cr>
+nmap <Leader>pl :SidewaysLeft<cr>
+nmap <Leader>== :Tabularize /^[^=]*\zs=/l1c1l1<cr>
+
 "
 " vimrc file for following the coding standards specified in PEP 7 & 8.
 "
@@ -142,3 +146,6 @@ au BufRead,BufNewFile *.yml,*.yaml set expandtab
 
 au BufRead,BufNewFile *.go set tabstop=4
 au BufRead,BufNewFile *.go set shiftwidth=4
+
+au BufRead,BufNewFile *.proto set shiftwidth=4
+au BufRead,BufNewFile *.proto set expandtab
