@@ -147,5 +147,8 @@ au BufRead,BufNewFile *.yml,*.yaml set expandtab
 au BufRead,BufNewFile *.go set tabstop=4
 au BufRead,BufNewFile *.go set shiftwidth=4
 
+au BufRead,BufNewFile *.hs set shiftwidth=4
+au BufRead,BufNewFile *.hs set expandtab
+
 au BufRead,BufNewFile *.proto set shiftwidth=4
 au BufRead,BufNewFile *.proto set expandtab
