@@ -25,6 +25,7 @@ let g:pymode_folding = 0
 let g:ale_emit_conflict_warnings = 1
 let g:ale_javascript_eslint_executable = $HOME . "/.nvm/versions/node/v7.8.0/bin/eslint"
 let g:ale_python_pylint_executable = $HOME . "/.pyenv/versions/tox/bin/pylint"
+let g:ale_lua_luacheck_executable = $HOME . "/LuaDist/luacheck/bin/luacheck"
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 0
 let g:ale_linters = {'go': ['go vet']}
@@ -144,6 +145,10 @@ au BufRead,BufNewFile *.yml,*.yaml set tabstop=8
 au BufRead,BufNewFile *.yml,*.yaml set shiftwidth=2
 au BufRead,BufNewFile *.yml,*.yaml set expandtab
 
+au BufRead,BufNewFile *.rb set tabstop=4
+au BufRead,BufNewFile *.rb set shiftwidth=4
+au BufRead,BufNewFile *.rb set expandtab
+
 au BufRead,BufNewFile *.go set tabstop=4
 au BufRead,BufNewFile *.go set shiftwidth=4
 
@@ -152,3 +157,6 @@ au BufRead,BufNewFile *.hs set expandtab
 
 au BufRead,BufNewFile *.proto set shiftwidth=4
 au BufRead,BufNewFile *.proto set expandtab
+
+au BufRead,BufNewFile *.lua set shiftwidth=4
+au BufRead,BufNewFile *.lua set expandtab
