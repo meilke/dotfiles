@@ -160,3 +160,6 @@ au BufRead,BufNewFile *.proto set expandtab
 
 au BufRead,BufNewFile *.lua set shiftwidth=4
 au BufRead,BufNewFile *.lua set expandtab
+
+let $SPECIFIC_VIMRC = $HOME . "/.vimrc.specific"
+source $SPECIFIC_VIMRC
