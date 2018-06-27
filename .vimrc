@@ -45,9 +45,7 @@ autocmd FileType python nnoremap <Leader>= :0,$!yapf<CR>
 nmap <Leader>ne :NERDTreeToggle<cr>
 nmap <Leader>nf :NERDTreeFind<cr>
 
-nmap <Leader>l :lclose<cr>
-nmap <Leader>ll :ccl<cr>
-nnoremap <expr> <leader>c tabpagenr('$') > 1 ? ':tabclose<CR>' : ':q<CR>'
+nnoremap <expr> <Leader>qq tabpagenr('$') > 1 ? ':tabclose<CR>' : ':q<CR>'
 
 nmap <Leader>pr :SidewaysRight<cr>
 nmap <Leader>pl :SidewaysLeft<cr>
