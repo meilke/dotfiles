@@ -156,6 +156,9 @@ au BufRead,BufNewFile *.hs set expandtab
 au BufRead,BufNewFile *.proto set shiftwidth=4
 au BufRead,BufNewFile *.proto set expandtab
 
+au BufRead,BufNewFile *.conf set shiftwidth=4
+au BufRead,BufNewFile *.conf set expandtab
+
 au BufRead,BufNewFile *.lua set shiftwidth=4
 au BufRead,BufNewFile *.lua set expandtab
 
