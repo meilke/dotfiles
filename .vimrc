@@ -21,6 +21,7 @@ let g:pymode_lint = 0
 let g:pymode_lint_ignore = "E221"
 let g:pymode_lint_on_fly = 1
 let g:pymode_folding = 0
+let g:pymode_options_colorcolumn = 0
 
 let g:ale_emit_conflict_warnings = 1
 let g:ale_javascript_eslint_executable = $HOME . "/.nvm/versions/node/v7.8.0/bin/eslint"
@@ -37,6 +38,10 @@ nmap <F8> <Plug>(ale_fix)
 
 let NERDTreeIgnore = ['\.pyc$']
 
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 set completeopt-=preview
 
 nmap <Leader>s <Plug>(easymotion-sn)
@@ -45,7 +50,7 @@ autocmd FileType python nnoremap <Leader>= :0,$!yapf<CR>
 nmap <Leader>ne :NERDTreeToggle<cr>
 nmap <Leader>nf :NERDTreeFind<cr>
 
-nnoremap <expr> <Leader>qq tabpagenr('$') > 1 ? ':tabclose<CR>' : ':q<CR>'
+nnoremap <expr> <Leader>ww tabpagenr('$') > 1 ? ':tabclose<CR>' : ':q<CR>'
 
 nmap <Leader>pr :SidewaysRight<cr>
 nmap <Leader>pl :SidewaysLeft<cr>
