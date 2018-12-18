@@ -158,6 +158,9 @@ au BufRead,BufNewFile *.go set shiftwidth=4
 au BufRead,BufNewFile *.hs set shiftwidth=4
 au BufRead,BufNewFile *.hs set expandtab
 
+au BufRead,BufNewFile *.conf set shiftwidth=4
+au BufRead,BufNewFile *.conf set expandtab
+
 au BufRead,BufNewFile *.proto set shiftwidth=4
 au BufRead,BufNewFile *.proto set expandtab
 
