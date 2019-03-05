@@ -44,6 +44,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 set completeopt-=preview
 
+let g:lt_location_list_toggle_map = "<leader>l"
+let g:lt_quickfix_list_toggle_map = "<leader>q"
+
 nmap <Leader>s <Plug>(easymotion-sn)
 
 autocmd FileType python nnoremap <Leader>= :0,$!yapf<CR>
