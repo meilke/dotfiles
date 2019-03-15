@@ -177,3 +177,11 @@ let $SPECIFIC_VIMRC = $HOME . "/.vimrc.specific"
 if !empty(glob($SPECIFIC_VIMRC))
     source $SPECIFIC_VIMRC
 endif
+
+if executable('ag')
+    " Use ag over grep
+    set grepprg=ag\ --nogroup\ --nocolor
+endif
+
+noremap <leader>, :cp<CR>
+noremap <leader>. :cn<CR>
