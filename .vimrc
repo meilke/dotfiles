@@ -17,6 +17,8 @@ set backupcopy=yes
 
 command GdiffInTab tabedit %|Gdiff
 
+let g:localvimrc_ask = 0
+
 let g:pymode_lint = 0
 let g:pymode_lint_ignore = "E221"
 let g:pymode_lint_on_fly = 1
