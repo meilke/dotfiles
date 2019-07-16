@@ -29,17 +29,20 @@ min-similarity-lines=15
 #   C0111 = Missing docstring
 #   C0321 = More than one statement on a single line
 #   W0603 = Using the global statement
+#   R0801 = similar lines
 
+# Testing
+#   C0122 = misplaced-comparison-constant
 
 # Disable the message(s) with the given id(s).
-disable=W0142,W0403,R0201,W0613,W0232,R0903,W0614,R0911,R0913,R0914,C0103,E0401,W0402,C0321,W0603,C0111
+disable=W0142,W0403,R0201,W0613,W0232,R0903,W0614,R0911,R0913,R0914,C0103,E0401,W0402,C0321,W0603,C0111,C0122,R0801
 
 [VARIABLES]
 dummy-variables-rgx=_|dummy|i_|signature
 
 [FORMAT]
 max-module-lines=1500
-max-line-length=79
+max-line-length=120
 
 [DESIGN]
 max-returns=20
