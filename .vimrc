@@ -4,12 +4,12 @@ execute pathogen#infect()
 execute pathogen#helptags()
 syntax on
 filetype plugin indent on
-colorscheme molokai
+
+set t_Co=256
+colorscheme PaperColor
+set background=light
 
 let loaded_matchparen = 1
-
-"let g:molokai_original = 1
-"let g:rehash256 = 1
 
 autocmd QuickFixCmdPost *grep* cwindow
 
@@ -19,21 +19,26 @@ command GdiffInTab tabedit %|Gdiff
 
 let g:localvimrc_ask = 0
 
+let g:pymode = 0
 let g:pymode_lint = 0
 let g:pymode_lint_ignore = "E221"
 let g:pymode_lint_on_fly = 1
 let g:pymode_folding = 0
 let g:pymode_options_colorcolumn = 0
 
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_save = 1
+
 let g:ale_emit_conflict_warnings = 1
-let g:ale_javascript_eslint_executable = $HOME . "/.nvm/versions/node/v7.8.0/bin/eslint"
+let g:ale_javascript_eslint_executable = $HOME . "/.nvm/versions/node/v10.16.0/bin/eslint"
 let g:ale_python_pylint_executable = $HOME . "/.pyenv/versions/tox/bin/pylint"
-let g:ale_lua_luacheck_executable = $HOME . "/LuaDist/luacheck/bin/luacheck"
+let g:ale_lua_luacheck_executable = "/usr/local/bin/luacheck"
+let g:ale_go_langserver_executable = $HOME . "/go/bin/go-langserver"
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 0
-let g:ale_linters = {'go': ['go vet']}
+let g:ale_linters = {'go': ['go vet'], 'python': ['pyls']}
 let g:ale_fixers = {'go': ['gofmt']}
-let g:ale_fix_on_save = 1
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nmap <F8> <Plug>(ale_fix)
