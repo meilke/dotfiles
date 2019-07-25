@@ -19,7 +19,7 @@ command GdiffInTab tabedit %|Gdiff
 
 let g:localvimrc_ask = 0
 
-let g:pymode = 0
+let g:pymode = 1
 let g:pymode_lint = 0
 let g:pymode_lint_ignore = "E221"
 let g:pymode_lint_on_fly = 1
@@ -35,6 +35,15 @@ let g:ale_javascript_eslint_executable = $HOME . "/.nvm/versions/node/v10.16.0/b
 let g:ale_python_pylint_executable = $HOME . "/.pyenv/versions/tox/bin/pylint"
 let g:ale_lua_luacheck_executable = "/usr/local/bin/luacheck"
 let g:ale_go_langserver_executable = $HOME . "/go/bin/go-langserver"
+let g:ale_python_pyls_config =
+  \ {
+  \   'pyls': {
+  \     'plugins': {
+  \       'pydocstyle': {'enabled': v:true},
+  \       'pylint': {'enabled': v:false}
+  \     }
+  \   }
+  \ }
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 0
 let g:ale_linters = {'go': ['go vet'], 'python': ['pyls']}
