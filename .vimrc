@@ -26,6 +26,8 @@ let g:pymode_lint_on_fly = 1
 let g:pymode_folding = 0
 let g:pymode_options_colorcolumn = 0
 
+set omnifunc=ale#completion#OmniFunc
+
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_enter = 1
 let g:ale_lint_on_save = 1
@@ -34,22 +36,24 @@ let g:ale_emit_conflict_warnings = 1
 let g:ale_javascript_eslint_executable = $HOME . "/.nvm/versions/node/v10.16.0/bin/eslint"
 let g:ale_python_pylint_executable = $HOME . "/.pyenv/versions/tox/bin/pylint"
 let g:ale_lua_luacheck_executable = "/usr/local/bin/luacheck"
-let g:ale_go_langserver_executable = $HOME . "/go/bin/go-langserver"
+let g:ale_go_gopls_executable = $HOME . "/go/bin/gopls"
 let g:ale_python_pyls_config =
   \ {
   \   'pyls': {
   \     'plugins': {
   \       'pydocstyle': {'enabled': v:true},
-  \       'pylint': {'enabled': v:false}
+  \       'pylint': {'enabled': v:true}
   \     }
   \   }
   \ }
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 0
-let g:ale_linters = {'go': ['go vet'], 'python': ['pyls']}
+let g:ale_linters = {'go': ['gopls'], 'python': ['pyls'], 'lua': ['lualsp']}
 let g:ale_fixers = {'go': ['gofmt']}
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <silent> <C-a><C-g> <Plug>(ale_go_to_definition)
+nmap <silent> <C-a><C-f> <Plug>(ale_find_references)
 nmap <F8> <Plug>(ale_fix)
 
 let NERDTreeIgnore = ['\.pyc$']
@@ -74,6 +78,14 @@ nnoremap <expr> <Leader>ww tabpagenr('$') > 1 ? ':tabclose<CR>' : ':q<CR>'
 nmap <Leader>pr :SidewaysRight<cr>
 nmap <Leader>pl :SidewaysLeft<cr>
 nmap <Leader>== :Tabularize /^[^=]*\zs=/l1c1l1<cr>
+
+let g:ctrlp_custom_ignore = {
+ \ 'dir': 'node_modules$'
+ \ }
+
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 "
 " vimrc file for following the coding standards specified in PEP 7 & 8.
@@ -173,6 +185,7 @@ au BufRead,BufNewFile *.rb set expandtab
 
 au BufRead,BufNewFile *.go set tabstop=4
 au BufRead,BufNewFile *.go set shiftwidth=4
+au BufRead,BufNewFile *.go set noexpandtab
 
 au BufRead,BufNewFile *.hs set shiftwidth=4
 au BufRead,BufNewFile *.hs set expandtab
