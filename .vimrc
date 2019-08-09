@@ -35,6 +35,7 @@ let g:ale_lint_on_save = 1
 let g:ale_emit_conflict_warnings = 1
 let g:ale_javascript_eslint_executable = $HOME . "/.nvm/versions/node/v10.16.0/bin/eslint"
 let g:ale_python_pylint_executable = $HOME . "/.pyenv/versions/tox/bin/pylint"
+let g:ale_python_pyls_executable = $HOME . "/.pyenv/versions/tox/bin/pyls"
 let g:ale_lua_luacheck_executable = "/usr/local/bin/luacheck"
 let g:ale_go_gopls_executable = $HOME . "/go/bin/gopls"
 let g:ale_python_pyls_config =
