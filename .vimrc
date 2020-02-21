@@ -19,12 +19,16 @@ command GdiffInTab tabedit %|Gdiff
 
 let g:localvimrc_ask = 0
 
+let g:gitgutter_realtime = 0
+
 let g:pymode = 1
+let g:pymode_rope = 0
 let g:pymode_lint = 0
 let g:pymode_lint_ignore = "E221"
-let g:pymode_lint_on_fly = 1
+let g:pymode_lint_on_fly = 0
 let g:pymode_folding = 0
 let g:pymode_options_colorcolumn = 0
+let g:pymode_syntax_slow_sync = 0
 
 set omnifunc=ale#completion#OmniFunc
 
@@ -42,20 +46,33 @@ let g:ale_python_pyls_config =
   \ {
   \   'pyls': {
   \     'plugins': {
-  \       'pydocstyle': {'enabled': v:true},
-  \       'pylint': {'enabled': v:true}
+  \       'pycodestyle': {'enabled': v:true},
+  \       'pylint': {'enabled': v:true},
+  \       'jedi_definition': {'enabled': v:true}
   \     }
   \   }
   \ }
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 0
-let g:ale_linters = {'go': ['gopls'], 'python': ['pyls'], 'lua': ['lualsp']}
+let g:ale_linters =
+  \ {
+  \   'javascript': [],
+  \   'go': ['gopls'],
+  \   'python': ['pyls'],
+  \   'lua': ['lualsp']
+  \ }
 let g:ale_fixers = {'go': ['gofmt']}
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nmap <silent> <C-a><C-g> <Plug>(ale_go_to_definition)
+nmap <silent> <C-a><C-t> <Plug>(ale_go_to_definition_in_tab)
+nmap <silent> <C-a><C-s> <Plug>(ale_go_to_definition_in_split)
+nmap <silent> <C-a><C-v> <Plug>(ale_go_to_definition_in_vsplit)
 nmap <silent> <C-a><C-f> <Plug>(ale_find_references)
 nmap <F8> <Plug>(ale_fix)
+
+nmap <C-a><C-a> <Plug>Csurround{}
+nmap <C-a><C-z> <Plug>Csurround[]
 
 let NERDTreeIgnore = ['\.pyc$']
 
@@ -81,7 +98,7 @@ nmap <Leader>pl :SidewaysLeft<cr>
 nmap <Leader>== :Tabularize /^[^=]*\zs=/l1c1l1<cr>
 
 let g:ctrlp_custom_ignore = {
- \ 'dir': 'node_modules$'
+ \ 'dir': '(node_modules|builds)$'
  \ }
 
 set tabstop=4
@@ -172,10 +189,6 @@ au BufNewFile *.py,*.pyw,*.c,*.h set fileformat=unix
 
 " Folding based on indentation: ``set foldmethod=indent``
 "
-au BufRead,BufNewFile *.json,*.js,*.jsx set tabstop=8
-au BufRead,BufNewFile *.json,*.js,*.jsx set shiftwidth=2
-au BufRead,BufNewFile *.json,*.js,*.jsx set expandtab
-
 au BufRead,BufNewFile *.yml,*.yaml set tabstop=8
 au BufRead,BufNewFile *.yml,*.yaml set shiftwidth=2
 au BufRead,BufNewFile *.yml,*.yaml set expandtab
