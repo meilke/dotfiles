@@ -1,8 +1,12 @@
 call ale#Set('lua_lua_lsp_executable', 'lua-lsp')
 
 function! ale_linters#lua#lualsp#FindProjectRoot(buffer) abort
-    let l:dotgit = ale#path#FindNearestDirectory(a:buffer, '.git')
+    let l:luacheckrc = ale#path#FindNearestFile(a:buffer, '.luacheckrc')
+    if !empty(l:luacheckrc)
+        return fnamemodify(l:luacheckrc, ':h')
+    endif
 
+    let l:dotgit = ale#path#FindNearestDirectory(a:buffer, '.git')
     if !empty(l:dotgit)
         return fnamemodify(l:dotgit, ':h')
     endif
