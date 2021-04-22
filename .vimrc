@@ -15,6 +15,12 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 set backupcopy=yes
 
+" Fugitive Conflict Resolution
+nnoremap <leader>gd :Gvdiff<CR>
+nnoremap gdh :diffget //2<CR>
+nnoremap gdl :diffget //3<CR>
+
+" More Fugitive
 command GdiffInTab tabedit %|Gdiff
 
 let g:localvimrc_ask = 0
@@ -30,8 +36,11 @@ let g:pymode_folding = 0
 let g:pymode_options_colorcolumn = 0
 let g:pymode_syntax_slow_sync = 0
 
+let g:typescript_indent_disable = 0
+
 set omnifunc=ale#completion#OmniFunc
 
+let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_enter = 1
 let g:ale_lint_on_save = 1
@@ -39,7 +48,8 @@ let g:ale_lint_on_save = 1
 let g:ale_emit_conflict_warnings = 1
 let g:ale_javascript_eslint_executable = $HOME . "/.nvm/versions/node/v10.16.0/bin/eslint"
 let g:ale_python_pylint_executable = $HOME . "/.pyenv/versions/tox/bin/pylint"
-let g:ale_python_pyls_executable = $HOME . "/.pyenv/versions/tox/bin/pyls"
+let g:ale_python_pyls_executable = "pyls"
+let g:ale_python_pyls_use_global = 0
 let g:ale_lua_luacheck_executable = "/usr/local/bin/luacheck"
 let g:ale_go_gopls_executable = $HOME . "/go/bin/gopls"
 let g:ale_python_pyls_config =
@@ -74,7 +84,7 @@ nmap <F8> <Plug>(ale_fix)
 nmap <C-a><C-a> <Plug>Csurround{}
 nmap <C-a><C-z> <Plug>Csurround[]
 
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\.egg-info$']
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -98,7 +108,7 @@ nmap <Leader>pl :SidewaysLeft<cr>
 nmap <Leader>== :Tabularize /^[^=]*\zs=/l1c1l1<cr>
 
 let g:ctrlp_custom_ignore = {
- \ 'dir': '(node_modules|builds)$'
+ \ 'dir': 'node_modules\|builds'
  \ }
 
 set tabstop=4
@@ -137,7 +147,7 @@ fu Select_c_style()
     if search('^\t', 'n', 150)
         set shiftwidth=8
         set noexpandtab
-    el 
+    el
         set shiftwidth=4
         set expandtab
     en
